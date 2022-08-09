@@ -4,6 +4,8 @@
 /node_modules
 /.pnp
 .pnp.js
+credentials.json
+go.sum
 
 # testing
 /coverage
