@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 
 const LandingZone = () => {
   const router = useRouter();
-  console.log({ router });
+  console.log({ query: router.query });
   return (
     <>
       <h1>loading</h1>
