@@ -14,9 +14,9 @@ import (
 
 func Handler(w http.ResponseWriter, r *http.Request) {
 	ctx := context.Background()
-	// b := "{'web':{'client_id': '123809003660-loa68504p4vkv03ce02g2fjrgg1s5543.apps.googleusercontent.com','project_id': 'river-daylight-337214','auth_uri':'https://accounts.google.com/o/oauth2/auth','token_uri':'https://oauth2.googleapis.com/token','auth_provider_x509_cert_url':'https://www.googleapis.com/oauth2/v1/certs','client_secret':'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','redirect_uris': ['https://sync-appointment.vercel.app/landing-zone']}}"
+	// b := "{'web':{'client_id': '_','project_id': '_','auth_uri':'https://accounts.google.com/o/oauth2/auth','token_uri':'https://oauth2.googleapis.com/token','auth_provider_x509_cert_url':'https://www.googleapis.com/oauth2/v1/certs','client_secret':'_','redirect_uris': ['https://sync-appointment.vercel.app/landing-zone']}}"
 	
-	s := map[string]string{"client_id": "123809003660-loa68504p4vkv03ce02g2fjrgg1s5543.apps.googleusercontent.com", "project_id": "river-daylight-337214", "auth_uri": "https://accounts.google.com/o/oauth2/auth", "token_uri": "https://oauth2.googleapis.com/token", "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs", "client_secret": "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"}
+	s := map[string]string{"client_id": "_", "project_id": "_", "auth_uri": "https://accounts.google.com/o/oauth2/auth", "token_uri": "https://oauth2.googleapis.com/token", "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs", "client_secret": "_"}
 	a := map[string]map[string]string{"web": s}
 	bolB, _ := json.Marshal(a)
 
@@ -25,7 +25,6 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 			log.Fatalf("Unable to parse client secret file to config: %v", err)
 	}
-
 
 	client := getClient(config)
 
